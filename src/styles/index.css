@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@font-face {
+  font-family: "IRANSansWeb(FaNum)";
+  src: url("//db.onlinewebfonts.com/t/5c53f1a72f61b5b51e2ea79a22ebc38b.eot");
+  src: url("//db.onlinewebfonts.com/t/5c53f1a72f61b5b51e2ea79a22ebc38b.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/5c53f1a72f61b5b51e2ea79a22ebc38b.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/5c53f1a72f61b5b51e2ea79a22ebc38b.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/5c53f1a72f61b5b51e2ea79a22ebc38b.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/5c53f1a72f61b5b51e2ea79a22ebc38b.svg#IRANSansWeb(FaNum)")
+      format("svg");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  text-align: right;
+  box-sizing: border-box;
+  font-family: "Noto Sans Arabic";
+}
+
+:root {
+  --cyan: #1f7a8c;
+  --grey: #6d6d6d;
+  --black: #000000;
+  --lightGrey: #999ca7;
+  --background: #ffffff;
+  --boxShadow: 0 0 15px 10px rgba(0, 0, 0, 0.07);
+  --inputBoxShadow: 0 0 10px 5px rgba(0, 0, 0, 0.07);
+}
+
+/* to remove increase and decrease button in input number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+button,
+input {
+  border: none;
+  outline: none;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--lightGrey);
+  border-radius: 1rem;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background-color: var(--cyan);
+}

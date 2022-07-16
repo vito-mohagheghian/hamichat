@@ -1,0 +1,282 @@
+.form-container {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  background-color: var(--background);
+}
+.form {
+  position: relative;
+  padding: 1rem;
+  height: fit-content;
+  width: 32rem;
+  border-radius: 1rem;
+  background-color: var(--background);
+  box-shadow: var(--boxShadow);
+}
+.form img {
+  margin-right: calc(50% - 3.75rem);
+  width: 7.5rem;
+  animation: 3s floating infinite ease-in-out;
+}
+.service-description {
+  margin: 0 10%;
+  width: 80%;
+  height: 3rem;
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-align: center;
+  color: var(--lightGrey);
+}
+.service-description b {
+  font-weight: 900;
+}
+.input-container {
+  margin-top: 0.5rem;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.input-container label {
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+}
+.input-container input {
+  padding: 1rem;
+  width: 100%;
+  height: 3.5rem;
+  font: normal 1.1rem "IRANSansWeb(FaNum)" !important;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  color: var(--grey);
+  box-shadow: var(--inputBoxShadow);
+}
+.input-container input::placeholder {
+  font-size: 1rem;
+  color: var(--lightGrey);
+}
+.rules-container {
+  position: relative;
+  top: 0.5rem;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: var(--lightGrey);
+}
+.rules-container::before {
+  content: "";
+  position: absolute;
+  inset: 0 85%;
+  height: 100%;
+  width: 15%;
+  z-index: 2;
+  transform: rotate(180deg);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) -11.67%,
+    #ffffff 73.82%
+  );
+}
+.rules-container::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 15%;
+  z-index: 2;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) -11.67%,
+    #ffffff 73.82%
+  );
+}
+.rules-slider {
+  position: absolute;
+  padding-right: 100%;
+  height: 2rem;
+  display: flex;
+  column-gap: 5rem;
+  align-items: center;
+  list-style: none;
+  white-space: nowrap;
+  animation: scrolling 40s ease-out infinite;
+}
+.rules-acception {
+  margin: 0.5rem;
+  display: flex;
+  column-gap: 0.5rem;
+  align-items: center;
+  font-size: 1rem;
+  color: var(--lightGrey);
+}
+.checkbox {
+  position: relative;
+  width: 1.1rem;
+  height: 1.1rem;
+  cursor: pointer;
+  -moz-appearance: initial;
+}
+.checkbox::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1.1rem;
+  z-index: 2;
+  display: block;
+  visibility: visible;
+  border-radius: 0.2rem;
+  border: 2px solid #d1d1d6;
+  background-color: var(--background);
+  background: url("../assists/checkbox.svg");
+  background-position: center;
+  background-size: cover;
+}
+.checkbox::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  visibility: visible;
+  border-radius: 0.2rem;
+}
+.checkbox:checked::after {
+  background-color: var(--cyan);
+}
+.checkbox:checked::before {
+  border: 1.5px solid var(--cyan);
+}
+.rules-acception a {
+  color: var(--cyan);
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-decoration: underline;
+  transform: all 500ms;
+  cursor: pointer;
+}
+.rules-acception a:hover {
+  text-shadow: 0 0 20px var(--cyan);
+}
+.login-submit-button {
+  margin-top: 0.5rem;
+  width: 100%;
+  height: 3.5rem;
+  display: grid;
+  place-items: center;
+  font-size: 1.1rem;
+  border-radius: 0.75rem;
+  color: var(--background);
+  background-color: var(--cyan);
+  transition: all 500ms;
+  cursor: pointer;
+}
+.login-submit-button:hover {
+  box-shadow: 0 0 20px var(--cyan);
+}
+.login-copyright {
+  position: absolute;
+  bottom: -2rem;
+  right: 50%;
+  transform: translateX(50%);
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: var(--lightGrey);
+}
+@media screen and (max-width: 600px) {
+  .form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: none;
+  }
+  .form img {
+    width: 25vw;
+    margin-right: 0;
+  }
+  .service-description {
+    margin-top: 2vw;
+    height: 12vw;
+    font-size: 3vw;
+  }
+  .input-container {
+    margin-top: 2.5vw;
+    width: 90vw;
+  }
+  .input-container label {
+    font-size: 4vw;
+  }
+  .input-container input {
+    padding: 3vw;
+    height: 13vw;
+    width: 100%;
+    font-size: 4.5vw;
+  }
+  .input-container input::placeholder {
+    font-size: 4vw;
+  }
+  .rules-container {
+    margin-top: 2vw;
+    height: 10vw;
+  }
+  .rules-slider {
+    height: 8vw;
+    font-size: 3.5vw;
+  }
+  .rules-acception {
+    margin-top: 2vw;
+    width: 100%;
+    font-size: 3vw;
+    column-gap: 2vw;
+  }
+  .checkbox {
+    width: 5vw;
+    height: 5vw;
+  }
+  .checkbox::after {
+    height: 100%;
+    width: 100%;
+  }
+  .checkbox::before {
+    width: 100%;
+    height: 100%;
+  }
+  .rules-acception a {
+    font-size: 2.75vw;
+  }
+  .login-submit-button {
+    margin-top: 0.5rem;
+    width: 100%;
+    height: 11vw;
+    font-size: 3.5vw;
+  }
+  .login-copyright {
+    position: fixed;
+    bottom: 0.5rem;
+    font-size: 3vw;
+  }
+}
+@keyframes floating {
+  0% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+@keyframes scrolling {
+  from {
+    transform: translate(00%, 0);
+  }
+  to {
+    transform: translate(100%, 0);
+  }
+}
